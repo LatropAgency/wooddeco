@@ -1,0 +1,8 @@
+{% extends 'my-account.html' %}
+{% block my_account %}
+    <form method="post" action="{% url 'user:authorization' %}">
+        {% csrf_token %}
+        {{ edit_form }}
+        <input type="submit" value="Сохранить изменения">
+    </form>
+{% endblock %}

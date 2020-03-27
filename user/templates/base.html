@@ -20,6 +20,10 @@
     {% endif %}
 {% endblock %}
 <a href="{% url 'shop:index' %}">Лого</a>
+<br>
+{% for category in categories %}
+    <a href="{% url 'shop:product-category' category.slug %}">{{ category }}</a>->{{ category.parent }}<br>
+{% endfor %}
 <a href="{% url 'user:my-account' %}">Мой аккаунт</a>
 Корзина:
 {% block basket %}

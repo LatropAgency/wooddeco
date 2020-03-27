@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Подробнее{% endblock %}
+
+{% block body %}
+    <br>
+    {% if more_info %}
+        <h1>{{ more_info.title }}</h1>
+        {{ more_info.description }}
+        {{ more_info.price }}
+    {% endif %}
+{% endblock %}
